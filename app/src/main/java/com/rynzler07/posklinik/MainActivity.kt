@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 progressDialog.isIndeterminate = true
                 progressDialog.setMessage("Loading . . . . ")
                 progressDialog.show()
-                val intent = Intent(this, Login::class.java)
+                val intent = Intent(this, Dashboard::class.java)
                 startActivity(intent)
                 finish()
             }
