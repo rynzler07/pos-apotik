@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_satu"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/icon_dokter"
         android:title="Dokter" />
 
     <item
         android:id="@+id/navigation_dua"
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@drawable/icon_pasien"
         android:title="Pasien" />
 
     <item
         android:id="@+id/navigation_tiga"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/icon_obat"
         android:title="Obat"/>
 
 </menu>
