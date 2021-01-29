@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_dokter"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Dokter"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_spesialis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spesialis"
+                android:textSize="12sp"
+                android:layout_marginRight="6dp"/>
+
+            <TextView
+                android:id="@+id/tv_nama_rs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Rumah Sakit"
+                android:textSize="12sp"
+                android:layout_marginLeft="6dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/img_review"
+                android:layout_height="24dp"
+                android:layout_width="24dp"
+                android:src="@drawable/review_star"
+                android:layout_marginRight="80dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="90dp"
+                android:text="Buat Janji"
+                android:textColor="#00CC6A"
+                android:textSize="10sp"
+                android:textStyle="normal"
+                android:backgroundTint="#CCF5E1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
