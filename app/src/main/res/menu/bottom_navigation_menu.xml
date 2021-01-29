@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_satu"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Dokter" />
+
+    <item
+        android:id="@+id/navigation_dua"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Pasien" />
+
+    <item
+        android:id="@+id/navigation_tiga"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Obat"/>
+
+</menu>
