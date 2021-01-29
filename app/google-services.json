@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "821513196505",
+    "project_id": "pos-klinik",
+    "storage_bucket": "pos-klinik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821513196505:android:08c44881b6d3b745217fc8",
+        "android_client_info": {
+          "package_name": "com.rynzler07.posklinik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821513196505-427m6ebt4csg1et918u2ksubhovs00in.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rynzler07.posklinik",
+            "certificate_hash": "61508cd81b3469456134c08af72b49f5807d927f"
+          }
+        },
+        {
+          "client_id": "821513196505-p64nbsarn26i74nu2phv6log7ooth071.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjiVhdMwWwJnS3jypcaw_iYxZlsm6MeZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821513196505-p64nbsarn26i74nu2phv6log7ooth071.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
