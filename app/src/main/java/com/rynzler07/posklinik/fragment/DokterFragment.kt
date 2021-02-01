@@ -35,10 +35,10 @@ class DokterFragment : Fragment() {
         val item:ArrayList<DataDokter> = ArrayList()
 
         item.add(DataDokter(R.drawable.dokter1, "dr. Gandhi Iskandar", "Test", "Heart - Persahabatan Hospital", R.drawable.review_star, R.drawable.dokter1))
-        item.add(DataDokter(R.drawable.dokter1, "Test", "dr. Tuti Hartati", "Eye - RSUD Mitra Plumbon", R.drawable.review_star, R.drawable.dokter1))
-        item.add(DataDokter(R.drawable.dokter1, "Test", "dr. Asep Sumail", "Dental - Audy Dental Clinic", R.drawable.review_star, R.drawable.dokter1))
-        item.add(DataDokter(R.drawable.dokter1, "Test", "dr. Hetti Mariyati", "Skin - Rumah Sakit Edelweis", R.drawable.review_star, R.drawable.dokter1))
-        item.add(DataDokter(R.drawable.dokter1, "Test", "dr. Bayu Mahadi", "Heart - Khalisa Hospital", R.drawable.review_star, R.drawable.dokter1))
+        item.add(DataDokter(R.drawable.dokter1, "dr. Tuti Hartati", "Eye", "RSUD Mitra Plumbon", R.drawable.review_star, R.drawable.dokter1))
+        item.add(DataDokter(R.drawable.dokter1, "dr. Asep Sumail", "Dental", "Audy Dental Clinic", R.drawable.review_star, R.drawable.dokter1))
+        item.add(DataDokter(R.drawable.dokter1, "dr. Hetti Mariyati", "Skin", "Rumah Sakit Edelweis", R.drawable.review_star, R.drawable.dokter1))
+        item.add(DataDokter(R.drawable.dokter1, "dr. Bayu Mahadi", "Heart", "Khalisa Hospital", R.drawable.review_star, R.drawable.dokter1))
         val adapter = MyDokterAdapter(item)
 
         recyclerView.layoutManager = LinearLayoutManager(context)
