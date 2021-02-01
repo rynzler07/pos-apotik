@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.rynzler07.posklinik.fragment.DokterFragment
 import com.rynzler07.posklinik.fragment.MedicineFragment
@@ -13,10 +12,11 @@ import com.rynzler07.posklinik.fragment.PatientFragment
 
 class MainActivity : AppCompatActivity() {
 
-    // Membuat fragment objek
-//    lateinit var dokterFragment: DokterFragment
-//    lateinit var patientFragment: PatientFragment
-//    lateinit var medicineFragment: MedicineFragment
+    //Membuat fragment objek
+    lateinit var dokterFragment: DokterFragment
+    lateinit var patientFragment: PatientFragment
+    lateinit var medicineFragment: MedicineFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_satu -> {
                     makeCurrentFragment(dokterFragment)
                 }R.id.navigation_dua -> {
-                    makeCurrentFragment(patientFragment)
-                }R.id.navigation_tiga -> {
-                    makeCurrentFragment(medicineFragment)
-                }
+                makeCurrentFragment(patientFragment)
+            }R.id.navigation_tiga -> {
+                makeCurrentFragment(medicineFragment)
+            }
             }
             false
         }
@@ -50,4 +50,4 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.fl_content, fragment)
             commit()
         }
-}
+    }
