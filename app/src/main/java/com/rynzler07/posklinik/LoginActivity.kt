@@ -53,8 +53,10 @@ class LoginActivity : AppCompatActivity() {
         btn_google = findViewById(R.id.btn_google)
 
         btn_login.setOnClickListener {
-            val username = et_username.text.toString()
-            val password = et_password.text.toString()
+//            val username = et_username.text.toString()
+//            val password = et_password.text.toString()
+            val username = "admin"
+            val password = "admin"
             Toast.makeText(this, "Test", Toast.LENGTH_SHORT).show()
 
             if (username.isEmpty() || password.isEmpty()) {

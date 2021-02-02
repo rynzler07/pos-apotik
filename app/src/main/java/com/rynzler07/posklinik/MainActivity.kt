@@ -22,9 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var bottomnav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        var frameLayout = findViewById<FrameLayout>(R.id.fl_content)
-
+        val bottomnav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomnav.setItemIconTintList(null);
         val dokterFragment = DokterFragment()
         val patientFragment = PatientFragment()
         val medicineFragment = MedicineFragment()
@@ -32,14 +31,16 @@ class MainActivity : AppCompatActivity() {
         makeCurrentFragment(dokterFragment)
 
         bottomnav?.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId) {
+            when (item.itemId) {
                 R.id.navigation_satu -> {
                     makeCurrentFragment(dokterFragment)
-                }R.id.navigation_dua -> {
-                makeCurrentFragment(patientFragment)
-            }R.id.navigation_tiga -> {
-                makeCurrentFragment(medicineFragment)
-            }
+                }
+                R.id.navigation_dua -> {
+                    makeCurrentFragment(patientFragment)
+                }
+                R.id.navigation_tiga -> {
+                    makeCurrentFragment(medicineFragment)
+                }
             }
             false
         }
@@ -50,4 +51,4 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.fl_content, fragment)
             commit()
         }
-    }
+}

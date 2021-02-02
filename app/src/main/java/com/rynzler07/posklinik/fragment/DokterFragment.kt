@@ -1,5 +1,6 @@
 package com.rynzler07.posklinik.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.rynzler07.posklinik.FormActivity
 import com.rynzler07.posklinik.R
 import com.rynzler07.posklinik.adapter.MyDokterAdapter
 import com.rynzler07.posklinik.data.DataDokter
@@ -39,10 +41,13 @@ class DokterFragment : Fragment() {
         item.add(DataDokter(R.drawable.dokter1, "dr. Asep Sumail", "Dental", "Audy Dental Clinic", R.drawable.review_star, R.drawable.dokter1))
         item.add(DataDokter(R.drawable.dokter1, "dr. Hetti Mariyati", "Skin", "Rumah Sakit Edelweis", R.drawable.review_star, R.drawable.dokter1))
         item.add(DataDokter(R.drawable.dokter1, "dr. Bayu Mahadi", "Heart", "Khalisa Hospital", R.drawable.review_star, R.drawable.dokter1))
-        val adapter = MyDokterAdapter(item)
-
+        val adapter = MyDokterAdapter()
+        adapter.setItem(item)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         recyclerView.adapter = adapter
+        adapter.onItemClick = {selected->
+            startActivity(Intent(context,FormActivity::class.java).putExtra("NamaDokter",selected.tv_dokter))
+        }
     }
 }

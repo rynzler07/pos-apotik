@@ -3,41 +3,32 @@ package com.rynzler07.posklinik.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.afdhal_fa.baseprojectlibrary.base.BaseRecyclerViewAdapter
 import com.rynzler07.posklinik.R
-import com.rynzler07.posklinik.data.DataObat
 import com.rynzler07.posklinik.data.DataPasien
+import com.rynzler07.posklinik.databinding.RvListPasienBinding
 
-class MyPasienAdapter(private val obatList: List<DataPasien>) : RecyclerView.Adapter<MyPasienAdapter.PasienViewHolder>() {
+class MyPasienAdapter : BaseRecyclerViewAdapter<MyPasienAdapter.PasienViewHolder, DataPasien>() {
+    inner class PasienViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val mBinding = RvListPasienBinding.bind(itemView)
+        fun onBind(mDataPasien: DataPasien) {
+            mBinding.tvNoHP.text = mDataPasien.phoneNumbe
+            mBinding.tvNamaPasien.text = mDataPasien.patientName
+            mBinding.tvNamaDokter.text = mDataPasien.docterName
+            mBinding.tvTglJanji.text = mDataPasien.appointmentDate
+        }
+
+    }
+
+
+    override fun onBindViewHolder(holder: PasienViewHolder, item: DataPasien, position: Int) {
+        holder.onBind(item)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PasienViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.rv_list_pasien,parent,false)
-
-        return PasienViewHolder(itemView)
-    }
-
-    override fun onBindViewHolder(holder: PasienViewHolder, position: Int) {
-        val currentItem = obatList[position]
-
-        holder.textView1.text = currentItem.nomorHP
-        holder.textView2.text = currentItem.namaPasien
-        holder.textView3.text = currentItem.namaDokter
-        holder.textview4.text = currentItem.tglJanji
-
-    }
-
-    override fun getItemCount() = obatList.size
-
-
-    class PasienViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val textView1: TextView = itemView.findViewById(R.id.tv_noHP)
-        val textView2: TextView = itemView.findViewById(R.id.tv_nama_pasien)
-        val textView3: TextView = itemView.findViewById(R.id.tv_nama_dokter)
-        val textview4: TextView = itemView.findViewById(R.id.tv_tglJanji)
-
-
-
+        return PasienViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.rv_list_pasien, parent, false)
+        )
     }
 }
