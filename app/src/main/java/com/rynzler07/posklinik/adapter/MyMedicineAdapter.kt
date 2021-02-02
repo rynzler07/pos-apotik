@@ -9,12 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rynzler07.posklinik.R
 import com.rynzler07.posklinik.data.DataObat
-import java.nio.file.Files.size
 
-class ObatAdapter(private val obatList: List<DataObat>) : RecyclerView.Adapter<ObatAdapter.ObatViewHolder>() {
+class MyMedicineAdapter(private val obatList: List<DataObat>) : RecyclerView.Adapter<MyMedicineAdapter.ObatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ObatViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.obat_item,parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.rv_list_medicine,parent,false)
 
         return ObatViewHolder(itemView)
     }
