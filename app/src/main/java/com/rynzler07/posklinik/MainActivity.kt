@@ -1,9 +1,13 @@
 package com.rynzler07.posklinik
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.rynzler07.posklinik.fragment.DokterFragment
@@ -44,6 +48,25 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.action_bar_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.action_keranjang) {
+            val intent = Intent(this, KeranjangActivity::class.java)
+            startActivity(intent)
+//            Toast.makeText(this, "Item Keranjang Clicked", Toast.LENGTH_SHORT).show()
+            return true
+        }else if (id == R.id.action_search){
+            Toast.makeText(this, "Item Pencarian Clicked", Toast.LENGTH_SHORT).show()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun makeCurrentFragment(fragment: Fragment) =
