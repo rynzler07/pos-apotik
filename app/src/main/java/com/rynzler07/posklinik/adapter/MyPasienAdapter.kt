@@ -17,6 +17,7 @@ class MyPasienAdapter : BaseRecyclerViewAdapter<MyPasienAdapter.PasienViewHolder
             mBinding.tvNamaPasien.text = mDataPasien.patientName
             mBinding.tvNamaDokter.text = mDataPasien.docterName
             mBinding.tvTglJanji.text = mDataPasien.appointmentDate
+            mBinding.tvJamJanji.text = mDataPasien.appointmentTime
         }
 
     }

@@ -53,17 +53,25 @@ class LoginActivity : AppCompatActivity() {
         btn_google = findViewById(R.id.btn_google)
 
         btn_login.setOnClickListener {
-//            val username = et_username.text.toString()
-//            val password = et_password.text.toString()
-            val username = "admin"
-            val password = "admin"
-            Toast.makeText(this, "Test", Toast.LENGTH_SHORT).show()
+            val username = et_username.text.toString()
+            val password = et_password.text.toString()
+//            val username = "admin"
+//            val password = "admin"
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please Insert Email & Password", Toast.LENGTH_SHORT)
-                return@setOnClickListener
+
+            if (username.isEmpty() && password.isEmpty()) {
+                Toast.makeText(this, "Please Insert Email & Password", Toast.LENGTH_SHORT).show()
             }
-            if (username == "admin" || password == "admin") {
+
+            if(username == "admin" && password == "admin"){
+                Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
+            }
+
+            if (username != "admin" && password != "admin"){
+                Toast.makeText(this, "Email & Password Incorrect !!", Toast.LENGTH_SHORT).show()
+            }
+
+            if (username == "admin" && password == "admin") {
                 val progressDialog =
                     ProgressDialog(this, R.style.Theme_MaterialComponents_Light_Dialog)
                 progressDialog.isIndeterminate = true

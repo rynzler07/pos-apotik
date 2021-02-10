@@ -51,7 +51,6 @@
                 android:text="Tambah"
                 android:textColor="#00CC6A"
                 android:textSize="10sp" />
-
         </RelativeLayout>
 
     </LinearLayout>

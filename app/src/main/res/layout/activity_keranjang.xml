@@ -25,18 +25,18 @@
         android:id="@+id/cs_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/sv_keranjang"
-        app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/border"
-        android:foregroundGravity="bottom">
+        android:foregroundGravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cs_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="20dp">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tv_jml_item"
@@ -44,19 +44,19 @@
                 android:layout_height="wrap_content"
                 android:text="Jumlah Item : 6"
                 android:textSize="13sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_total_harga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Harga : Rp 250.000,00"
-                android:textStyle="bold"
-                android:textSize="20sp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintTop_toBottomOf="@id/tv_jml_item"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:text="Total Harga : Rp 250.000,00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jml_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,36 +64,35 @@
             android:id="@+id/cs_2"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/cs_1"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
             android:background="@drawable/border"
-            android:layout_marginLeft="20dp">
+            app:layout_constraintStart_toEndOf="@id/cs_1"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tv_saldo"
+            <EditText
+                android:id="@+id/EditText_saldo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp 300.000,00"
-                android:textSize="13sp"
                 android:layout_marginLeft="15dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:hint="Rp 300.000,00"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tv_saldo"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/EditText_saldo">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:textSize="15sp"
                     android:layout_marginLeft="15dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:text="Bayar"
-                    />
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

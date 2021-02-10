@@ -53,7 +53,7 @@ class FormActivity : AppCompatActivity() {
                 appointmentTime = jamJanji,
                 gender = valueRadio
             )
-            if (validate(nama, alamat, tglJanji, jamJanji)) {
+            if (validate(nama, alamat, tglJanji, jamJanji,noHp)) {
                 binding.progressBar.visibility =View.VISIBLE
                 pasienRef.add(mDataPasien)
                     .addOnCompleteListener {
@@ -75,19 +75,34 @@ class FormActivity : AppCompatActivity() {
 
     private fun validate(
         nama: String,
+        noHp: String,
         alamat: String,
         tgljanji: String,
         jamjanji: String
     ): Boolean {
 
         if (nama.isEmpty()) {
-            binding.EditTextNamaPasien.error = "Masukkan Nama"
+            binding.EditTextNamaPasien.error = "Masukkan Nama !!"
+            return false
+        }else if(noHp.isEmpty()){
+            binding.EditTextNoHP.error = "Masukkan No Hp !!"
+            return false
+        }else if(alamat.isEmpty()){
+            binding.EditTextAlamat.error = "Masukkan Alamat !!"
+            return false
+        }else if(tgljanji.isEmpty()){
+            binding.EditTextTglJanji.error = "Masukkan Tanggal !!"
+            return false
+        }else if(jamjanji.isEmpty()){
+            binding.EditTextJamJanji.error = "Masukkan Jam !!"
             return false
         } else {
             binding.EditTextNamaPasien.error = null
+            binding.EditTextNoHP.error = null
+            binding.EditTextAlamat.error = null
+            binding.EditTextTglJanji.error = null
+            binding.EditTextJamJanji.error = null
         }
-
-
         return true
     }
 }

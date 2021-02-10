@@ -22,7 +22,7 @@
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         android:elevation="2dp"
-        app:itemTextColor="@color/medicineFragment"
+        app:itemTextColor="#00CC6A"
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
