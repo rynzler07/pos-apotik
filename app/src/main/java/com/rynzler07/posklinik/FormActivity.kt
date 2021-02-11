@@ -1,6 +1,7 @@
 package com.rynzler07.posklinik
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,7 @@ class FormActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = "Data Patient"
 
         val namaDokter = intent.getStringExtra("NamaDokter") as String
         var valueRadio = "L"
@@ -104,5 +106,20 @@ class FormActivity : AppCompatActivity() {
             binding.EditTextJamJanji.error = null
         }
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }

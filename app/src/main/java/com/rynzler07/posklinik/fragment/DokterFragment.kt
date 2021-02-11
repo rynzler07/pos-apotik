@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rynzler07.posklinik.FormActivity
@@ -31,6 +32,8 @@ class DokterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val actionBar = (activity as AppCompatActivity).supportActionBar
+        actionBar?.title = "Doctor"
 
         val recyclerView:RecyclerView = view.findViewById(R.id.rv_dokter)
 

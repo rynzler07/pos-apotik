@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         if (id == R.id.action_keranjang) {
             val intent = Intent(this, KeranjangActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 //            Toast.makeText(this, "Item Keranjang Clicked", Toast.LENGTH_SHORT).show()
             return true
         }else if (id == R.id.action_search){
